@@ -1,58 +1,55 @@
 # Hi, I'm Manish
 
-I build systems for AI infrastructure, long-context inference, memory hierarchy control, observability, and performance engineering.
+I build kernel-leaning systems for AI infrastructure, KV-cache orchestration, memory hierarchy control, and low-latency runtime behavior.
 
-Most of my work sits at the boundary between models and machines: Linux control planes, KV-cache orchestration, GPU runtime behavior, browser telemetry, and research-heavy technical prototypes that turn architecture ideas into concrete artifacts.
+Most of my work sits close to the machine: Linux control planes, kernel-facing memory and I/O experiments, CPU scheduling and latency behavior, KV-state movement, and research prototypes that make systems ideas concrete.
 
 ## About Me
 
-- I like working on the hard parts of AI systems: latency, residency, scheduling, movement, and instrumentation.
-- I build across the stack: kernel-facing interfaces, runtime prototypes, observability tooling, CUDA study surfaces, and polished technical microsites.
-- I care a lot about making research legible, so I pair code with clear docs, diagrams, and architecture-driven writeups.
+- I like working on the hard parts of systems for AI: memory placement, I/O paths, scheduler behavior, latency control, and observability.
+- I build across the stack, but I naturally gravitate toward Linux, kernel-adjacent interfaces, CPU and memory behavior, and runtime control planes.
+- I care about making low-level work legible, so I pair code with diagrams, RFC-style docs, and architecture-driven writeups.
 
 ## Current Focus
 
-- AI memory systems and KV-cache orchestration
-- Linux control planes for inference workloads
-- GPU runtime performance and low-latency serving
-- Agentic infrastructure and dataplane design
-- Systems-grade observability and debugging tools
+- KV-cache orchestration and memory residency control
+- Linux kernel control planes for inference workloads
+- CPU, IRQ, scheduler, and latency-path tuning
+- Storage and I/O behavior for decode-critical serving paths
+- Systems observability for real AI infrastructure
 
 ## Selected Projects
 
-- [AI Host Observability](https://github.com/manishklach/ai-host-observability)  
-  Linux-first Prometheus and triage toolkit for GPU and RDMA hosts, focused on catching hidden host pressure before it becomes a latency or reliability incident.
+- [kairo-io](https://github.com/manishklach/kairo-io)  
+  AI KV-cache-aware Linux block I/O work focused on decode-priority scheduling, placement metadata, NVMe backend mapping, and kernel tracepoint visibility.
 
-- [ChromeLens](https://github.com/manishklach/chromelens)  
-  A fleet-wide Chrome DevTools Protocol telemetry engine for tracing render-path bottlenecks across large web surfaces.
-
-- [Agentic NIC Dataplane Lab](https://github.com/manishklach/Agentic-NIC-Dataplane-Lab)  
-  A Linux-first reference lab for AF_XDP, io_uring, RDMA, and bounded autonomous NIC behavior for agentic AI systems.
+- [kv-cpu-driver](https://github.com/manishklach/kv-cpu-driver)  
+  A Linux control-plane and hardware-interface scaffold for semantic KV-cache orchestration, with CPU-facing coordination, RTL structure, and FPGA emulation paths.
 
 - [linux-hbf-control-plane](https://github.com/manishklach/linux-hbf-control-plane)  
-  An experimental Linux RFC exploring runtime-guided placement, prefetch, promote, and demote hints for future HBF/CXL-era inference memory systems.
+  An RFC-style Linux exploration of runtime-guided memory placement, prefetch, promotion, and demotion for future CXL/HBF-era inference systems.
 
-- [PMPP CUDA Study](https://github.com/manishklach/pmpp-cuda-study)  
-  A structured CUDA learning and reference repo with 150 examples spanning fundamentals, optimization patterns, irregular workloads, and ML-oriented kernels.
+- [kernel-dvfs-agentic-latency](https://github.com/manishklach/kernel-dvfs-agentic-latency)  
+  A kernel latency control-plane project spanning DVFS, cpuidle, IRQs, scheduler behavior, MM, VFS, I/O, and cgroup budget control for latency-sensitive AI execution.
 
-- [manishklach.github.io](https://github.com/manishklach/manishklach.github.io)  
-  My portfolio hub for systems architecture, technical writing, project microsites, and research-oriented public artifacts.
+- [ai-host-observability](https://github.com/manishklach/ai-host-observability)  
+  Linux-first host observability for GPU and RDMA systems, built to surface memory pressure, reclaim, PCIe, NUMA, IRQ, and host-side failure signals before they become incidents.
 
 ## Writing And Portfolio
 
 - Portfolio: [manishklach.github.io](https://manishklach.github.io/)
 - Repositories: [github.com/manishklach](https://github.com/manishklach?tab=repositories)
 
-I regularly publish architecture-driven essays, project microsites, and technical companion material around AI infrastructure, inference systems, and memory-centric design.
+I regularly publish architecture-driven essays and technical companion material around Linux systems, AI infrastructure, memory-centric design, and runtime control.
 
 ## What You’ll Find Here
 
-- Research prototypes for inference runtimes and memory systems
-- Linux and systems-facing experiments
-- Performance analysis and observability tooling
-- Public technical writing and architecture notes
-- Project sites tied to deeper implementation work
+- Kernel and kernel-adjacent experiments
+- KV-cache, memory, CPU, and I/O control-plane ideas
+- Systems observability and performance tooling
+- RFC-style writeups, architecture notes, and technical docs
+- Research prototypes tied to real implementation artifacts
 
 ---
 
-If you're into AI systems, runtime design, memory hierarchy problems, Linux performance, or observability for real workloads, you'll probably find something interesting here.
+If you're into Linux internals, memory systems, KV-cache control, CPU latency paths, or kernel-facing AI infrastructure work, you'll probably find something interesting here.
