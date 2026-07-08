@@ -1,12 +1,6 @@
 <p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=manishklach&show_icons=true&theme=transparent&hide_border=true&count_private=true&include_all_commits=true&text_color=e6edf3&title_color=58a6ff&icon_color=79c0ff" />
-    <img src="https://github-readme-stats.vercel.app/api?username=manishklach&show_icons=true&theme=transparent&hide_border=true&count_private=true&include_all_commits=true&text_color=1f2328&title_color=0969da&icon_color=0969da" width="49%" />
-  </picture>
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=manishklach&layout=compact&theme=transparent&hide_border=true&text_color=e6edf3&title_color=58a6ff" />
-    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=manishklach&layout=compact&theme=transparent&hide_border=true&text_color=1f2328&title_color=0969da" width="37%" />
-  </picture>
+  <img src="https://github-readme-stats.vercel.app/api?username=manishklach&show_icons=true&theme=transparent&hide_border=true&count_private=true&include_all_commits=true" width="49%" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=manishklach&layout=compact&theme=transparent&hide_border=true" width="37%" />
 </p>
 
 <p align="center">
