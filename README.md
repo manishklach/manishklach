@@ -12,10 +12,10 @@
 <p align="center">
   <a href="https://manishklach.github.io/writings.html"><img src="https://img.shields.io/badge/230%2B_Essays-000?style=flat-square&logo=readthedocs&logoColor=white" /></a>
   <a href="https://github.com/manishklach?tab=repositories"><img src="https://img.shields.io/badge/55_Repositories-000?style=flat-square&logo=github&logoColor=white" /></a>
-  <a href="https://manishklach.github.io/patents.html"><img src="https://img.shields.io/badge/68_Patents_Filed/Granted-000?style=flat-square&logo=documon&logoColor=white" /></a>
+  <a href="https://manishklach.github.io/patents.html"><img src="https://img.shields.io/badge/68_Patents_Filed/Granted-000?style=flat-square" /></a>
   <img src="https://img.shields.io/badge/Linux_Kernel-000?style=flat-square&logo=linux&logoColor=white" />
   <img src="https://img.shields.io/badge/CUDA-76B900?style=flat-square&logo=nvidia&logoColor=white" />
-  <img src="https://img.shields.io/badge/CXL/HBM-000?style=flat-square&logo=simpleanalytics&logoColor=white" />
+  <img src="https://img.shields.io/badge/CXL_HBM-000?style=flat-square" />
 </p>
 
 # Manish K L — AI Infrastructure, Linux Kernel & Memory Systems
