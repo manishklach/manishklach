@@ -1,9 +1,4 @@
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=manishklach&show_icons=true&theme=transparent&hide_border=true&count_private=true&include_all_commits=true" width="49%" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=manishklach&layout=compact&theme=transparent&hide_border=true" width="37%" />
-</p>
-
-<p align="center">
   <a href="https://manishklach.github.io/writings.html"><img src="https://img.shields.io/badge/230%2B_Essays-000?style=flat-square&logo=readthedocs&logoColor=white" /></a>
   <a href="https://github.com/manishklach?tab=repositories"><img src="https://img.shields.io/badge/55_Repositories-000?style=flat-square&logo=github&logoColor=white" /></a>
   <a href="https://manishklach.github.io/patents.html"><img src="https://img.shields.io/badge/68_Patents_Filed/Granted-000?style=flat-square" /></a>
