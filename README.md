@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://manishklach.github.io/writings.html"><img src="https://img.shields.io/badge/230%2B_Essays-000?style=flat-square&logo=readthedocs&logoColor=white" /></a>
-  <a href="https://github.com/manishklach?tab=repositories"><img src="https://img.shields.io/badge/55_Repositories-000?style=flat-square&logo=github&logoColor=white" /></a>
+  <a href="https://github.com/manishklach?tab=repositories"><img src="https://img.shields.io/badge/57_Repositories-000?style=flat-square&logo=github&logoColor=white" /></a>
   <a href="https://manishklach.github.io/patents.html"><img src="https://img.shields.io/badge/68_Patents_Filed/Granted-000?style=flat-square" /></a>
   <img src="https://img.shields.io/badge/Linux_Kernel-000?style=flat-square&logo=linux&logoColor=white" />
   <img src="https://img.shields.io/badge/CUDA-76B900?style=flat-square&logo=nvidia&logoColor=white" />
@@ -19,6 +19,9 @@ Most of my work sits close to the machine — Linux control planes, kernel-facin
 ---
 
 ## Flagship Work
+
+**RL Inference Scheduler**  
+[`rl-inference-scheduler`](https://github.com/manishklach/rl-inference-scheduler) — Reinforcement learning for LLM inference scheduling. DQN agent balances throughput, TTFT, latency, and memory pressure against FIFO/SJF/priority baselines.
 
 **Kernel & Systems Fast Path**  
 [`linux-kernel-inference-fastpath`](https://github.com/manishklach/linux-kernel-inference-fastpath) — Linux kernel and systems fast path for LLM inference: eBPF tracing, runtime hints, cgroups, NUMA/GPU locality, KV-cache memory policies, and TTFT boost.
@@ -60,7 +63,7 @@ Most of my work sits close to the machine — Linux control planes, kernel-facin
 
 I work on the hard parts of systems for AI — memory placement, I/O paths, scheduler behavior, latency control, and observability. I build across the stack, but naturally gravitate toward Linux, kernel-adjacent interfaces, CPU and memory behavior, and runtime control planes. I pair code with diagrams, RFC-style docs, and architecture-driven writeups to make low-level work legible.
 
-**55 repositories** across kernel experiments, KV-cache infrastructure, memory systems, network dataplanes, AI runtimes, and performance tooling.
+**57 repositories** across kernel experiments, KV-cache infrastructure, memory systems, network dataplanes, AI runtimes, and performance tooling.
 
 ---
 
