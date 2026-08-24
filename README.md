@@ -1,76 +1,62 @@
-<p align="center">
-  <a href="https://manishklach.github.io/writings.html"><img src="https://img.shields.io/badge/230%2B_Essays-000?style=flat-square&logo=readthedocs&logoColor=white" /></a>
-  <a href="https://github.com/manishklach?tab=repositories"><img src="https://img.shields.io/badge/57_Repositories-000?style=flat-square&logo=github&logoColor=white" /></a>
-  <a href="https://manishklach.github.io/patents.html"><img src="https://img.shields.io/badge/68_Patents_Filed/Granted-000?style=flat-square" /></a>
-  <img src="https://img.shields.io/badge/Linux_Kernel-000?style=flat-square&logo=linux&logoColor=white" />
-  <img src="https://img.shields.io/badge/CUDA-76B900?style=flat-square&logo=nvidia&logoColor=white" />
-  <img src="https://img.shields.io/badge/CXL_HBM-000?style=flat-square" />
-</p>
+<div align="center">
 
-# Manish K L — AI Infrastructure, Linux Kernel & Memory Systems
+# Manish K L
 
-I build **kernel-leaning systems for AI infrastructure**: KV-cache orchestration, memory hierarchy control, low-latency runtimes, and patent-backed hardware–software interfaces.
+### AI infrastructure · GPU runtimes · memory systems · Linux
 
-Most of my work sits close to the machine — Linux control planes, kernel-facing memory and I/O experiments, CPU scheduling and latency behavior, KV-state movement, and research prototypes that make systems ideas concrete.
+**I build the machinery around models.**
 
-> **230+ technical essays** — deep dives on Linux internals, memory systems, inference runtimes, and AI infrastructure.  
-> ➡️ [manishklach.github.io/writings.html](https://manishklach.github.io/writings.html)
+[![Writings](https://img.shields.io/badge/230%2B_technical_essays-111111?style=flat-square&logo=readthedocs&logoColor=white)](https://manishklach.github.io/writings.html)
+[![Portfolio](https://img.shields.io/badge/portfolio-111111?style=flat-square&logo=githubpages&logoColor=white)](https://manishklach.github.io/)
+[![Patents](https://img.shields.io/badge/68_patents_filed%2Fgranted-111111?style=flat-square)](https://manishklach.github.io/patents.html)
 
----
+</div>
 
-## Flagship Work
+I design and prototype AI systems from the Linux and storage layers up through GPU kernels and inference control planes. My work focuses on a practical question: **how do we make large-model inference faster, cheaper, and easier to operate?**
 
-**RL Inference Scheduler**  
-[`rl-inference-scheduler`](https://github.com/manishklach/rl-inference-scheduler) — Reinforcement learning for LLM inference scheduling. DQN agent balances throughput, TTFT, latency, and memory pressure against FIFO/SJF/priority baselines.
+The repositories here are executable architecture work—code, benchmarks, simulators, kernel RFCs, hardware interfaces, and production-oriented reference systems.
 
-**Kernel & Systems Fast Path**  
-[`linux-kernel-inference-fastpath`](https://github.com/manishklach/linux-kernel-inference-fastpath) — Linux kernel and systems fast path for LLM inference: eBPF tracing, runtime hints, cgroups, NUMA/GPU locality, KV-cache memory policies, and TTFT boost.
+## Selected systems
 
-**Memory Fabric**  
-[`flash-sram-dram-inference-fabric`](https://github.com/manishklach/flash-sram-dram-inference-fabric) — Predictive SRAM–DRAM–SSD memory fabric for low-cost AI inference, long-context KV cache tiering, and MoE expert staging.
+| Project | What it explores |
+| --- | --- |
+| [**Inference Factory Simulator**](https://github.com/manishklach/inference-factory-sim) | Trace-driven LLM serving economics: continuous batching, disaggregated prefill/decode, speculative decoding, MoE balance, tiered KV reuse, GPU cost, and margin. |
+| [**ExpertMesh**](https://github.com/manishklach/expertmesh) | A low-cost AMD/ROCm stationary-expert fabric for trillion-parameter sparse MoE inference, with packed-INT4 HIP kernels and activation-only RoCE transport. |
+| [**KVSSD Attention**](https://github.com/manishklach/kvssd-attention) | SSD-resident INT2/INT4 KV cache with bounded asynchronous staging and fused CUDA/Triton dequantizing decode attention. |
+| [**K3 Inference Platform**](https://github.com/manishklach/k3-inference-platform) | A production-oriented MoE serving control plane: checkpoint release gates, capacity planning, admission, OpenAI-compatible routing, benchmarks, and observability. |
+| [**GB300 RL Runtime**](https://github.com/manishklach/gb300-rl-runtime) | A close-to-metal C/CUDA runtime with persistent GPU workers, hugepage KV arenas, command rings, and no per-token CPU orchestration. |
+| [**AttnRes Kernel Lab**](https://github.com/manishklach/attnres-kernel-lab) | Fused PyTorch/Triton kernels for routing across model depth and sequence time, including Hydra-2P, KDA, and CADR. |
+| [**Linux HBF Control Plane**](https://github.com/manishklach/linux-hbf-control-plane) | An executable Linux memory-tiering RFC with asynchronous range hints, NUMA migration, tracepoints, selftests, and observability. |
+| [**OpenFlash Controller Lab**](https://github.com/manishklach/openflash-controller-lab) | An executable NAND-controller architecture spanning FTL, scheduling, queue ABI, QEMU PCI emulation, and a Linux `blk-mq` driver. |
 
-**CPU Performance Control Plane**  
-[`cpuopt-kernel`](https://github.com/manishklach/cpuopt-kernel) — Safe, reversible Linux CPU performance profiles across CPUFreq, intel\_pstate, amd-pstate, cpuidle, thermal, and hwmon backends.
+## The stack I work on
 
-**KV-Cache-Aware I/O**  
-[`kairo-io`](https://github.com/manishklach/kairo-io) — AI KV-cache-aware Linux block I/O: decode-priority scheduling, NVMe backend mapping, placement metadata, and kernel tracepoint visibility.
+```text
+model algorithms     fused attention · routing · low precision
+serving systems      admission · scheduling · release gates · economics
+GPU runtimes         persistent execution · command rings · fast paths
+memory systems       HBM/DRAM/NVMe tiering · KV placement · CXL/HBF
+host + kernel        Linux MM · block I/O · NUMA · eBPF · observability
+hardware interfaces flash controllers · RTL scaffolds · CPU/GPU fabrics
+```
 
-**GPU/RDMA Observability**  
-[`ai-host-observability`](https://github.com/manishklach/ai-host-observability) — Linux-first host observability for GPU and RDMA systems: memory pressure, PCIe, NUMA, IRQ, and host-side failure signals before they become incidents.
+## Current research direction
 
-**KV-CPU Hardware Interface**  
-[`kv-cpu-driver`](https://github.com/manishklach/kv-cpu-driver) — Linux control plane, RTL, and FPGA emulation scaffold for semantic KV-cache orchestration. Patent pending (India App No. 202641056309).
+- Treating inference as a **factory**, not a single kernel: utilization, placement, queueing, cost, and operational evidence all matter.
+- Moving fewer bytes: stationary experts, compact activations, quantized KV state, semantic reuse, and predictive residency.
+- Removing work from the token path: persistent GPU execution, bounded queues, preallocation, and explicit control-plane boundaries.
+- Making architecture claims testable through benchmarks, simulators, CI gates, tracepoints, and honest maturity labels.
 
-**Latency Control Plane**  
-[`kernel-dvfs-agentic-latency`](https://github.com/manishklach/kernel-dvfs-agentic-latency) — Kernel latency control plane spanning DVFS, cpuidle, IRQs, scheduler, MM, VFS, I/O, and cgroup budgets for agentic AI.
+## More work
 
-**Intent-Aware Attention**  
-[`intent-attention-kernel`](https://github.com/manishklach/intent-attention-kernel) — Intent-aware KV execution for agentic long-context inference: semantic block selection, dynamic scoring, KV quantization, and speculative prefetch.
+- [Linux inference fast path](https://github.com/manishklach/linux-kernel-inference-fastpath) — eBPF, cgroups, NUMA/GPU locality, KV memory policy, and TTFT control.
+- [AI host observability](https://github.com/manishklach/ai-host-observability) — Prometheus signals for GPU/RDMA hosts, PCIe, NUMA, memory pressure, IRQs, and kernel events.
+- [RL inference scheduler](https://github.com/manishklach/rl-inference-scheduler) — DQN scheduling against FIFO, SJF, and priority baselines.
+- [CPUOpt Kernel](https://github.com/manishklach/cpuopt-kernel) — safe, reversible CPU performance profiles across Linux power and thermal backends.
+- [MLX Metal Kernels](https://github.com/manishklach/mlx-metal-kernels) — experimental Apple Silicon kernels for attention, decode, and KV-cache primitives.
 
----
+## Writing and patents
 
-## Current Focus
+I pair systems code with architecture diagrams, RFC-style documents, and long-form technical writing. The portfolio includes **230+ essays** and a record of **68 patents filed or granted worldwide** across memory, storage, runtimes, and hardware–software interfaces.
 
-- KV-cache orchestration and memory residency control
-- Linux kernel control planes for inference workloads
-- CPU, IRQ, scheduler, and latency-path tuning
-- Storage and I/O behavior for decode-critical serving paths
-- Systems observability for real AI infrastructure
-
----
-
-## About
-
-I work on the hard parts of systems for AI — memory placement, I/O paths, scheduler behavior, latency control, and observability. I build across the stack, but naturally gravitate toward Linux, kernel-adjacent interfaces, CPU and memory behavior, and runtime control planes. I pair code with diagrams, RFC-style docs, and architecture-driven writeups to make low-level work legible.
-
-**57 repositories** across kernel experiments, KV-cache infrastructure, memory systems, network dataplanes, AI runtimes, and performance tooling.
-
----
-
-## Connect
-
-- **Writings & essays:** [manishklach.github.io/writings.html](https://manishklach.github.io/writings.html)
-- **Portfolio:** [manishklach.github.io](https://manishklach.github.io/)
-- **Patent record:** [manishklach.github.io/patents.html](https://manishklach.github.io/patents.html)
-- **GitHub:** [github.com/manishklach](https://github.com/manishklach?tab=repositories)
-- **X:** [@OrbitHigher](https://x.com/OrbitHigher)
+[Read the essays](https://manishklach.github.io/writings.html) · [Browse the portfolio](https://manishklach.github.io/) · [View the patent record](https://manishklach.github.io/patents.html) · [Follow on X](https://x.com/OrbitHigher)
